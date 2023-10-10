@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <form id="frm1" action="/actipn_page.php">
+      first name: <input type="text" name="fname" value="Donald" /><br />
+      last name: <input type="text" name="lname" value="Duck" /><br /><br />
+      <input type="submit" value="Submit" />
+    </form>
+    <p>These are the values of each element in the from</p>
+    <p id="demo"></p>
+    <script>
+      const x = document.forms["frm1"];
+      let txt = "";
+      for (let i = 0; i < x.length; i++) {
+        txt += x.elements[i].value + "<br>";
+      }
+      document.getElementById("demo").innerHTML = txt;
+    </script>
+  </body>
+</html>
